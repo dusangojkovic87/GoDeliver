@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vj0bZI/GyqQIatRwBryiI5AVbN77kDwaeSQeomZ0K/1vmEn986itubLaAtm0hmNeadooFBisNpWdagteOrlagA==",
+  "dgSpecHash": "PEIt36KBWsAhl5M48JDWqv5zxgv7FIN96aKG74yTzZojqg846b3LcyQfaFhnxzeYkb+KsAiQd1KukB7ZEaSUOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj",
+  "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,5 +1,6 @@
 
 using System.Reflection;
+using Authentication.API.ExceptionMiddlewares;
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantService.Infrastracture.Extensions;
 
@@ -7,6 +8,9 @@ using RestaurantService.Infrastracture.Extensions;
 
 {
     var builder = WebApplication.CreateBuilder(args);
+
+
+
 
     // Add services to the container.
     builder.Services.AddRestaurantDbContext(builder.Configuration.GetConnectionString("RestaurantService"));
@@ -34,6 +38,10 @@ using RestaurantService.Infrastracture.Extensions;
     }
 
     //app.UseHttpsRedirection();
+
+    //exception middlewares
+    app.UseMiddleware<GlobalErrorMiddleware>();
+    app.UseMiddleware<ValidationExceptionMiddleware>();
 
 
 

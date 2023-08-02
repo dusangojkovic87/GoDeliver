@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cAG42arLyvMIGSL8nUCmHbevhK7w4NXGndNwuKlNtKP0MoIhkNVuIHcBRQ7j+u7nq1Z+fYOOe2C2UUt90QGGpA==",
+  "dgSpecHash": "aHmNK/aVgxzPuDSTVGVEZx8JRKnlHt45I6AsTp3JNufOCzk9MfgwpXUq9VhHil1k33NYrpXn0FLw5ZSoqaO08Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Application\\Application.csproj",
+  "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dusan\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",

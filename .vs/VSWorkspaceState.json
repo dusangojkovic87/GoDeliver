@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\Services",
-    "\\src\\Services\\AuthenticationService\\Authentication.API"
+    "\\src\\Services\\RestaurantService",
+    "\\src\\Services\\RestaurantService\\Restaurant.API",
+    "\\src\\Services\\RestaurantService\\Restaurant.API\\Controllers"
   ],
-  "SelectedNode": "\\src\\Services\\AuthenticationService",
+  "SelectedNode": "\\src\\Services\\RestaurantService\\Restaurant.API\\Controllers\\Category.cs",
   "PreviewInSolutionExplorer": false
 }

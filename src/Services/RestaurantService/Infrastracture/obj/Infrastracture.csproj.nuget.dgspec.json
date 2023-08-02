@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj": {}
+    "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj": {
+    "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\dusan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj": {
+    "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj",
+        "projectUniqueName": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj",
         "projectName": "Infrastracture",
-        "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj",
+        "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\Infrastracture.csproj",
         "packagesPath": "C:\\Users\\dusan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\obj\\",
+        "outputPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Infrastracture\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -93,11 +93,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj"
+              "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj"
+              "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj": {
+                "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj"
               }
             }
           }
@@ -153,14 +153,14 @@
         }
       }
     },
-    "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj": {
+    "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj",
+        "projectUniqueName": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj",
+        "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\dusan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\obj\\",
+        "outputPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
