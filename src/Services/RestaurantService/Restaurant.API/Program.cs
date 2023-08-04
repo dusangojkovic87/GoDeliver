@@ -1,6 +1,16 @@
 
 using System.Reflection;
+using Application.Commands;
+using Application.Handlers;
+using Application.Interfaces;
+using Application.Services;
+using Application.Validators;
 using Authentication.API.ExceptionMiddlewares;
+using Domain.Entities;
+using Domain.Repositories;
+using FluentValidation;
+using Infrastracture.Data.Repositories;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using RestaurantService.Infrastracture.Extensions;
 
@@ -18,7 +28,17 @@ using RestaurantService.Infrastracture.Extensions;
     //Mediatr
     builder.Services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
+    //repositories
+    builder.Services.AddScoped<IRestaurantCategoryRepository, RestaurantCategoryRepository>();
 
+    //services
+    builder.Services.AddScoped<IRestaurantCategoryService, RestaurantCategoryService>();
+
+    //validators
+    builder.Services.AddScoped<IValidator<AddCategoryCommand>, RestaurantCategoryValidator>();
+
+    //handlers
+    builder.Services.AddScoped<IRequestHandler<AddCategoryCommand, Category>, AddCategoryCommandHandler>();
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
