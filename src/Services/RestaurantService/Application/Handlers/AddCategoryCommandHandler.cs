@@ -33,10 +33,21 @@ namespace Application.Handlers
 
 
 
+
+
             var categoryToAppend = new Category
             {
                 Name = request.Name
             };
+
+            //check if category exists
+            var categoryExists = await _restaurantCategoryService.DoesCategoryExists(categoryToAppend);
+
+            if (categoryExists)
+            {
+                throw new CustomValidationException(new List<string> { "Category already exists!" });
+
+            }
 
             var result = await _restaurantCategoryService.AddCategoryAsync(categoryToAppend);
             return result;

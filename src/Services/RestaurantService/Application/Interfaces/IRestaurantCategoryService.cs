@@ -9,5 +9,6 @@ namespace Application.Interfaces
     public interface IRestaurantCategoryService
     {
         Task<Category> AddCategoryAsync(Category category);
+        Task<bool> DoesCategoryExists(Category category);
     }
 }

@@ -9,5 +9,6 @@ namespace Domain.Repositories
     public interface IRestaurantCategoryRepository
     {
         Task<Category> AddCategoryAsync(Category category);
+        Task<bool> DoesCategoryExists(Category category);
     }
 }

@@ -24,5 +24,15 @@ namespace Application.Services
             return result;
 
         }
+
+        public async Task<bool> DoesCategoryExists(Category category)
+        {
+            var result = await _restaurantCategoryRepository.DoesCategoryExists(category);
+
+            return result;
+
+        }
+
+
     }
 }
