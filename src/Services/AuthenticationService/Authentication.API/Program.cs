@@ -16,6 +16,7 @@ using Authentication.API.ExceptionMiddlewares;
 using Infrastructure.Configuration;
 using Application.Interfaces;
 using Application.Services;
+using Authentication.API.Extensions;
 {
 
     var builder = WebApplication.CreateBuilder(args);
@@ -47,19 +48,18 @@ using Application.Services;
     });
 
     //fluent validation
-    builder.Services.AddScoped<IValidator<RegisterUserCommand>, UserValidator>();
+    builder.Services.AddValidators();
 
-    // CQRS handlers
-    builder.Services.AddScoped<IRequestHandler<RegisterUserCommand, User>, RegisterUserCommandHandler>();
-    builder.Services.AddScoped<IRequestHandler<LoginUserQuery, JwtToken>, LoginUserQueryHandler>();
-
+    // CQRS handlers registration
+    builder.Services.AddCqrsHandlers();
 
 
-    //Repositories DI
-    builder.Services.AddScoped<IAuthenticateRepository, AuthenticateRepository>();
 
-    //servises DI
-    builder.Services.AddScoped<IAuthenticateService, AuthenticateService>();
+    //adds repositories to DI
+    builder.Services.AddRepositories();
+
+    //adds application services to DI
+    builder.Services.AddApplicationServices();
 
 
     var app = builder.Build();

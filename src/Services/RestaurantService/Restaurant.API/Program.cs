@@ -13,6 +13,7 @@ using FluentValidation;
 using Infrastracture.Data.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Restaurant.API.Extensions;
 using RestaurantService.Infrastracture.Extensions;
 
 
@@ -29,20 +30,18 @@ using RestaurantService.Infrastracture.Extensions;
     //Mediatr
     builder.Services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
-    //repositories
-    builder.Services.AddScoped<IRestaurantCategoryRepository, RestaurantCategoryRepository>();
+    //ADDS repositories to DI
+    builder.Services.AddRepositories();
 
-    //services
-    builder.Services.AddScoped<IRestaurantCategoryService, RestaurantCategoryService>();
+    //adds application services to DI
+    builder.Services.AddApplicationServices();
 
-    //validators
-    builder.Services.AddScoped<IValidator<AddCategoryCommand>, RestaurantCategoryValidator>();
+    //adds validators to DI
+    builder.Services.AddValidators();
 
-    //handlers
-    builder.Services.AddScoped<IRequestHandler<AddCategoryCommand, Category>, AddCategoryCommandHandler>();
-    builder.Services.AddScoped<IRequestHandler<DeleteCategoryCommand, bool>, DeleteCategoryCommandHandler>();
-    builder.Services.AddScoped<IRequestHandler<GetAllCategoriesQuery, IEnumerable<Category>>, GetAllCategoriesQueryHandler>();
-    builder.Services.AddScoped<IRequestHandler<UpdateCategoryCommand, bool>, UpdateCategoryCommandHandler>();
+
+    //CQRS handlers registration
+    builder.Services.AddCqrsHandlers();
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -31,10 +31,6 @@ namespace Application.Handlers
 
             }
 
-
-
-
-
             var categoryToAppend = new Category
             {
                 Name = request.Name
