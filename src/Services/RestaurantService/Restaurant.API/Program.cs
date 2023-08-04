@@ -3,6 +3,7 @@ using System.Reflection;
 using Application.Commands;
 using Application.Handlers;
 using Application.Interfaces;
+using Application.Queries;
 using Application.Services;
 using Application.Validators;
 using Authentication.API.ExceptionMiddlewares;
@@ -40,6 +41,7 @@ using RestaurantService.Infrastracture.Extensions;
     //handlers
     builder.Services.AddScoped<IRequestHandler<AddCategoryCommand, Category>, AddCategoryCommandHandler>();
     builder.Services.AddScoped<IRequestHandler<DeleteCategoryCommand, bool>, DeleteCategoryCommandHandler>();
+    builder.Services.AddScoped<IRequestHandler<GetAllCategoriesQuery, IEnumerable<Category>>, GetAllCategoriesQueryHandler>();
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

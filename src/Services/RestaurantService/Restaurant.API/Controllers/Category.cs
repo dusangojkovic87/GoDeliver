@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands;
+using Application.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Restaurant.API.Dtos;
@@ -18,6 +19,19 @@ namespace Restaurant.API.Controllers
         public Category(IMediator mediator)
         {
             _mediatr = mediator;
+        }
+
+
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllCategories()
+        {
+            var request = new GetAllCategoriesQuery { };
+
+            var categories = await _mediatr.Send(request);
+
+
+            return Ok(categories);
+
         }
 
 

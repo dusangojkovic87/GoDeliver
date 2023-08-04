@@ -54,6 +54,11 @@ namespace Infrastracture.Data.Repositories
             return false;
         }
 
+        public async Task<IEnumerable<Category>> GetAllCategories()
+        {
+            var categories = await Task.Run(() => _context.Categories.ToList());
 
+            return categories;
+        }
     }
 }

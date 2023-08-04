@@ -38,5 +38,12 @@ namespace Application.Services
             var result = await _restaurantCategoryRepository.DeleteCategoryAsync(Id);
             return result;
         }
+
+        public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
+        {
+
+            var categories = await _restaurantCategoryRepository.GetAllCategories();
+            return categories;
+        }
     }
 }
