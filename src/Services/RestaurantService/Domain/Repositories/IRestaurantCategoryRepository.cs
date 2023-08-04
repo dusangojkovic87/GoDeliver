@@ -12,6 +12,9 @@ namespace Domain.Repositories
         Task<bool> DoesCategoryExists(Category category);
         Task<bool> DeleteCategoryAsync(int Id);
         Task<IEnumerable<Category>> GetAllCategories();
+        Task<bool> UpdateCategory(int Id, Category category);
+
+        Task<bool> DoesCategoryByIdExists(int Id);
 
 
     }

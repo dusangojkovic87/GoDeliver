@@ -60,5 +60,35 @@ namespace Infrastracture.Data.Repositories
 
             return categories;
         }
+
+        public async Task<bool> UpdateCategory(int Id, Category category)
+        {
+            var categoryToUpdate = await _context.Categories.FindAsync(Id);
+            categoryToUpdate.Name = category.Name;
+
+            await Task.Run(() => _context.Update(categoryToUpdate));
+
+            var result = await _context.SaveChangesAsync();
+
+            if (result > 0)
+            {
+                return true;
+            }
+
+            return false;
+
+
+
+
+
+        }
+
+        public async Task<bool> DoesCategoryByIdExists(int Id)
+        {
+            var exists = await Task.Run(() => _context.Categories.Any(c => c.Id == Id));
+            return exists;
+
+
+        }
     }
 }

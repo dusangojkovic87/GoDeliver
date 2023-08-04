@@ -73,5 +73,29 @@ namespace Restaurant.API.Controllers
             return BadRequest("Error happened,category not deleted! ");
 
         }
+
+
+        [HttpPost("update/{Id}")]
+        public async Task<IActionResult> UpdateCategory(int Id, [FromBody] CategoryDto category)
+        {
+
+            var updateCategoryCommand = new UpdateCategoryCommand
+            {
+                Id = Id,
+                Name = category.Name
+
+            };
+
+            var isUpdated = await _mediatr.Send(updateCategoryCommand);
+
+            if (isUpdated)
+            {
+                return Ok(category);
+            }
+
+            return BadRequest("Error,category not updated!");
+
+
+        }
     }
 }

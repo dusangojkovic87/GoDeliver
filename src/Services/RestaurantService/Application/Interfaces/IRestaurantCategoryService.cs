@@ -13,5 +13,14 @@ namespace Application.Interfaces
         Task<bool> DeleteCategoryByIdAsync(int Id);
 
         Task<IEnumerable<Category>> GetAllCategoriesAsync();
+        Task<bool> FindCategoryByIdAsync(int Id);
+
+        Task<bool> UpdateCategoryAsync(int Id, Category category);
+
+
+
+
+
+
     }
 }

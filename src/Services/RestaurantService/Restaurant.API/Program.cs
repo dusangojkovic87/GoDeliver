@@ -42,6 +42,7 @@ using RestaurantService.Infrastracture.Extensions;
     builder.Services.AddScoped<IRequestHandler<AddCategoryCommand, Category>, AddCategoryCommandHandler>();
     builder.Services.AddScoped<IRequestHandler<DeleteCategoryCommand, bool>, DeleteCategoryCommandHandler>();
     builder.Services.AddScoped<IRequestHandler<GetAllCategoriesQuery, IEnumerable<Category>>, GetAllCategoriesQueryHandler>();
+    builder.Services.AddScoped<IRequestHandler<UpdateCategoryCommand, bool>, UpdateCategoryCommandHandler>();
 
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

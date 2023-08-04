@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration.Assemblies;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces;
@@ -44,6 +45,18 @@ namespace Application.Services
 
             var categories = await _restaurantCategoryRepository.GetAllCategories();
             return categories;
+        }
+
+        public async Task<bool> FindCategoryByIdAsync(int Id)
+        {
+            var exists = await _restaurantCategoryRepository.DoesCategoryByIdExists(Id);
+            return exists;
+        }
+
+        public async Task<bool> UpdateCategoryAsync(int Id, Category category)
+        {
+            var result = await _restaurantCategoryRepository.UpdateCategory(Id, category);
+            return result;
         }
     }
 }
