@@ -41,6 +41,19 @@ namespace Infrastracture.Data.Repositories
 
         }
 
+        public async Task<bool> DeleteCategoryAsync(int Id)
+        {
+            var category = await _context.Categories.FindAsync(Id);
+            if (category != null)
+            {
+                _context.Categories.Remove(category);
+                _context.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
 
     }
 }

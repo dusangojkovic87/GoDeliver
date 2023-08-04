@@ -38,5 +38,26 @@ namespace Restaurant.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpDelete("delete/{Id}")]
+        public async Task<IActionResult> DeleteCategory(int Id)
+        {
+
+            var request = new DeleteCategoryCommand
+            {
+                Id = Id
+
+            };
+
+            var result = await _mediatr.Send(request);
+
+            if (result)
+            {
+                return NoContent();
+            }
+
+            return BadRequest("Error happened,category not deleted! ");
+
+        }
     }
 }

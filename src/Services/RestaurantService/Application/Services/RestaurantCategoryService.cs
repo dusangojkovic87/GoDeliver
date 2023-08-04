@@ -33,6 +33,10 @@ namespace Application.Services
 
         }
 
-
+        public async Task<bool> DeleteCategoryByIdAsync(int Id)
+        {
+            var result = await _restaurantCategoryRepository.DeleteCategoryAsync(Id);
+            return result;
+        }
     }
 }

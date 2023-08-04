@@ -10,5 +10,6 @@ namespace Application.Interfaces
     {
         Task<Category> AddCategoryAsync(Category category);
         Task<bool> DoesCategoryExists(Category category);
+        Task<bool> DeleteCategoryByIdAsync(int Id);
     }
 }
