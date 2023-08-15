@@ -1,18 +1,6 @@
 
 using System.Reflection;
-using Application.Commands;
-using Application.Handlers;
-using Application.Interfaces;
-using Application.Queries;
-using Application.Services;
-using Application.Validators;
 using Authentication.API.ExceptionMiddlewares;
-using Domain.Entities;
-using Domain.Repositories;
-using FluentValidation;
-using Infrastracture.Data.Repositories;
-using MediatR;
-using Microsoft.Extensions.DependencyInjection;
 using Restaurant.API.Extensions;
 using RestaurantService.Infrastracture.Extensions;
 

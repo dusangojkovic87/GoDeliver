@@ -11,7 +11,10 @@ namespace Restaurant.API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection service)
         {
+            //category
             service.AddScoped<IRestaurantCategoryService, RestaurantCategoryService>();
+            //restaurant
+            service.AddScoped<IRestaurantService, Application.Services.RestaurantService>();
 
             return service;
 

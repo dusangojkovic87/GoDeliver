@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands;
+using Application.Commands.Restaurant;
 using Application.Handlers;
+using Application.Handlers.Restaurant;
+using Application.Handlers.Restaurants;
 using Application.Queries;
+using Application.Queries.Restaurants;
 using Domain.Entities;
+using Domain.Models;
 using MediatR;
 
 namespace Restaurant.API.Extensions
@@ -21,6 +26,10 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<GetAllCategoriesQuery, IEnumerable<Category>>, GetAllCategoriesQueryHandler>();
             service.AddScoped<IRequestHandler<UpdateCategoryCommand, bool>, UpdateCategoryCommandHandler>();
 
+            //restaurant handlers
+
+            service.AddScoped<IRequestHandler<GetAllRestaurantQuery, IEnumerable<Domain.Entities.Restaurant>>, GetAllRestaurantQueryHandler>();
+            service.AddScoped<IRequestHandler<AddRestaurantCommand, AddRestaurantDto>, AddRestaurantCommandHandler>();
             return service;
 
         }

@@ -15,10 +15,8 @@ namespace Domain.Entities
         public string UserName { get; set; }
         public string Comment { get; set; }
         [Required]
-        public double Rating { get; set; }
-        [Required]
         public DateTime DatePosted { get; set; }
 
-        public Restaurant Restaurant { get; set; }
+
     }
 }

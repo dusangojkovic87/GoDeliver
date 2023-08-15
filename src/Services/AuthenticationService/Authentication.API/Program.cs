@@ -1,21 +1,9 @@
 using System.Reflection;
-using Application.Handlers;
-using Domain.Repositories;
-using Infrastructure.Data;
-using Infrastructure.Data.Repositories;
 using Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
-using FluentValidation;
-using src.Services.AuthenticationService.Domain.Entities;
-using Application.Validators;
-using Application.Commands;
-using MediatR;
-using Application.Queries;
-using Domain.Models;
 using Authentication.API.ExceptionMiddlewares;
 using Infrastructure.Configuration;
-using Application.Interfaces;
-using Application.Services;
+
 using Authentication.API.Extensions;
 {
 
