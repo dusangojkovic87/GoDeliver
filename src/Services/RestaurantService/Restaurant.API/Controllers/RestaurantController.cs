@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands.Restaurant;
 using Application.Queries.Restaurants;
-using Authentication.API.Exceptions;
 using Domain.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -65,6 +64,30 @@ namespace Restaurant.API.Controllers
             var restaurants = await _mediatr.Send(request);
 
             return Ok(restaurants);
+
+        }
+
+
+        [HttpDelete("delete/{Id}")]
+        public async Task<IActionResult> DeleteRestaurantById(int Id)
+        {
+
+            var request = new DeleteRestaurantByIdCommand
+            {
+                Id = Id
+
+            };
+
+            var result = await _mediatr.Send(request);
+
+            if (!result)
+            {
+
+                return BadRequest("Error,restaurant not deleted!");
+
+            }
+
+            return NoContent();
 
         }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Models;
+using Domain.Models.Restaurant;
 
 namespace Domain.Repositories
 {
@@ -11,5 +12,6 @@ namespace Domain.Repositories
     {
         Task<IEnumerable<Restaurant>> GetAllRestaurants();
         Task<bool> AddRestaurant(AddRestaurantDto restaurant);
+        Task<bool> DeleteRestaurantById(DeleteRestauratntByIdDto restaurant);
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application.Interfaces;
 using Domain.Entities;
 using Domain.Models;
+using Domain.Models.Restaurant;
 using Domain.Repositories;
 
 namespace Application.Services
@@ -23,6 +24,12 @@ namespace Application.Services
         public async Task<bool> AddRestaurantAsync(AddRestaurantDto restaurant)
         {
             var result = await _restaurantRepository.AddRestaurant(restaurant);
+            return result;
+        }
+
+        public async Task<bool> DeleteRestaurantByIdAsync(DeleteRestauratntByIdDto restaurantId)
+        {
+            var result = await _restaurantRepository.DeleteRestaurantById(restaurantId);
             return result;
         }
 

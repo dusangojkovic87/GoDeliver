@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Models;
+using Domain.Models.Restaurant;
 using Domain.Repositories;
 
 namespace Infrastracture.Data.Repositories
@@ -59,6 +60,23 @@ namespace Infrastracture.Data.Repositories
 
 
             return false;
+        }
+
+        public async Task<bool> DeleteRestaurantById(DeleteRestauratntByIdDto restaurant)
+        {
+
+            var resturantToDelete = _context.Restaurants.FirstOrDefault(r => r.Id.Equals(restaurant.Id));
+            if (resturantToDelete == null)
+            {
+                return false;
+            }
+
+            await Task.Run(() => _context.Restaurants.Remove(resturantToDelete));
+
+            var result = await _context.SaveChangesAsync() > 0;
+
+            return result;
+
         }
     }
 }
