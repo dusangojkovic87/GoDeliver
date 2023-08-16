@@ -1,22 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Entities;
 
-namespace Domain.Entities
+namespace Domain.Models.Review
 {
-    public class Review
+    public class AddReviewRequestDto
     {
-        [Key]
-        public int Id { get; set; }
         public int RestaurantId { get; set; }
-        [Required]
         public string UserName { get; set; }
         public string Comment { get; set; }
-        [Required]
         public int Rating { get; set; }
-        [Required]
         public DateTime DatePosted { get; set; }
 
 
