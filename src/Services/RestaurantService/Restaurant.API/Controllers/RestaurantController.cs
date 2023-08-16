@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands.Restaurant;
+using Application.Queries.Restaurant;
 using Application.Queries.Restaurants;
 using Domain.Models;
 using MediatR;
@@ -20,6 +21,24 @@ namespace Restaurant.API.Controllers
         {
             _mediatr = mediator;
 
+
+        }
+
+        [HttpGet("{Id}")]
+
+        public async Task<IActionResult> GetRestaurantById(int Id)
+        {
+
+            var request = new GetRestaurantByIdQuery
+            {
+                Id = Id
+
+            };
+
+
+            var result = await _mediatr.Send(request);
+
+            return Ok(result);
 
         }
 

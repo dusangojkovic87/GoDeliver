@@ -13,5 +13,6 @@ namespace Domain.Repositories
         Task<IEnumerable<Restaurant>> GetAllRestaurants();
         Task<bool> AddRestaurant(AddRestaurantDto restaurant);
         Task<bool> DeleteRestaurantById(DeleteRestauratntByIdDto restaurant);
+        Task<GetRestaurantByIdDtoResponce> GetRestaurantById(GetRestaurantByIdDtoRequest restaurant);
     }
 }

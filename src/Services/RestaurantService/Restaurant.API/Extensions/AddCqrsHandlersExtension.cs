@@ -8,6 +8,7 @@ using Application.Handlers;
 using Application.Handlers.Restaurant;
 using Application.Handlers.Restaurants;
 using Application.Queries;
+using Application.Queries.Restaurant;
 using Application.Queries.Restaurants;
 using Domain.Entities;
 using Domain.Models;
@@ -31,6 +32,7 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<GetAllRestaurantQuery, IEnumerable<Domain.Entities.Restaurant>>, GetAllRestaurantQueryHandler>();
             service.AddScoped<IRequestHandler<AddRestaurantCommand, AddRestaurantDto>, AddRestaurantCommandHandler>();
             service.AddScoped<IRequestHandler<DeleteRestaurantByIdCommand, bool>, DeleteRestaurantByIdCommandHandler>();
+            service.AddScoped<IRequestHandler<GetRestaurantByIdQuery, Domain.Entities.Restaurant>, GetRestaurantByIdQueryHandler>();
             return service;
 
         }

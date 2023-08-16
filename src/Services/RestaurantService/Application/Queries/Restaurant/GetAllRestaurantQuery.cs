@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Application.Queries.Restaurants
 {
-    public class GetAllRestaurantQuery : IRequest<IEnumerable<Restaurant>>
+    public class GetAllRestaurantQuery : IRequest<IEnumerable<Domain.Entities.Restaurant>>
     {
 
     }

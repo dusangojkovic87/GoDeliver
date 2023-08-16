@@ -6,6 +6,7 @@ using Domain.Entities;
 using Domain.Models;
 using Domain.Models.Restaurant;
 using Domain.Repositories;
+using Infrastracture.Exceptions;
 
 namespace Infrastracture.Data.Repositories
 {
@@ -77,6 +78,25 @@ namespace Infrastracture.Data.Repositories
 
             return result;
 
+        }
+
+        public async Task<GetRestaurantByIdDtoResponce> GetRestaurantById(GetRestaurantByIdDtoRequest restaurant)
+        {
+            var restaurantFromDb = await _context.Restaurants.FindAsync(restaurant.Id);
+            if (restaurantFromDb == null)
+            {
+                return new GetRestaurantByIdDtoResponce
+                {
+                    isNullable = true
+
+                };
+            }
+
+            return new GetRestaurantByIdDtoResponce
+            {
+                isNullable = false,
+                restaurant = restaurantFromDb
+            };
         }
     }
 }

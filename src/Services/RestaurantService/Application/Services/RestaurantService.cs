@@ -39,5 +39,14 @@ namespace Application.Services
 
             return restaurants;
         }
+
+        public async Task<GetRestaurantByIdDtoResponce> GetRestaurantByIdAsync(GetRestaurantByIdDtoRequest request)
+        {
+
+            var result = await _restaurantRepository.GetRestaurantById(request);
+
+            return result;
+
+        }
     }
 }

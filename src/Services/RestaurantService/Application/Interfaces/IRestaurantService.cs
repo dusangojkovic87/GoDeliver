@@ -14,5 +14,6 @@ namespace Application.Interfaces
         Task<IEnumerable<Restaurant>> GetAllRestaurantsAsync();
         Task<bool> AddRestaurantAsync(AddRestaurantDto restaurant);
         Task<bool> DeleteRestaurantByIdAsync(DeleteRestauratntByIdDto restaurantId);
+        Task<GetRestaurantByIdDtoResponce> GetRestaurantByIdAsync(GetRestaurantByIdDtoRequest request);
     }
 }
