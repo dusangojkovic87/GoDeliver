@@ -25,5 +25,16 @@ namespace Application.Services.Review
             var result = await _reviewRepository.AddReviewToRestaurant(request);
             return result;
         }
+
+        public async Task<bool> DeleteReviewByIdAsync(deleteReviewRequestDto request)
+        {
+            var result = await _reviewRepository.DeleteReview(request);
+
+            return result;
+
+
+
+
+        }
     }
 }

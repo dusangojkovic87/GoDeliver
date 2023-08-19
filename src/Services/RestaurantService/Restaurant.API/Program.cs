@@ -1,6 +1,9 @@
 
 using System.Reflection;
+using System.Text;
 using Authentication.API.ExceptionMiddlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Restaurant.API.Extensions;
 using RestaurantService.Infrastracture.Extensions;
 
@@ -31,15 +34,33 @@ using RestaurantService.Infrastracture.Extensions;
     //CQRS handlers registration
     builder.Services.AddCqrsHandlers();
 
+    //jwt configuration
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
+    {
+        var jwtSettings = builder.Configuration.GetSection("JwtConfig");
+        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("sdhshsfdghsfhgdfvbdfbnfthjfghnfgbncxvbsd"));
+        opt.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "http://localhost:5001",
+            ValidAudience = "http://localhost:5002",
+            IssuerSigningKey = secretKey
+        };
+
+    });
+
+
+
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
-
-
-
     var app = builder.Build();
+
+    app.UseAuthentication();
 
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())

@@ -23,6 +23,7 @@ using Authentication.API.Extensions;
         SecretKey = configuration["JwtConfig:SecretKey"],
         Issuer = configuration["JwtConfig:Issuer"],
         Audience = configuration["JwtConfig:Audience"]
+
     };
 
     builder.Services.AddJwtConfiguration(jwtConfig);

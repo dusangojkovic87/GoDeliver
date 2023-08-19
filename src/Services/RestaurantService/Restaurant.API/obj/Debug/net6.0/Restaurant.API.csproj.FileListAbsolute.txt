@@ -91,3 +91,4 @@ c:\Users\dusan\OneDrive\Desktop\GoDeliver\src\Services\RestaurantService\Restaur
 c:\Users\dusan\OneDrive\Desktop\GoDeliver\src\Services\RestaurantService\Restaurant.API\bin\Debug\net6.0\FluentValidation.dll
 c:\Users\dusan\OneDrive\Desktop\GoDeliver\src\Services\RestaurantService\Restaurant.API\bin\Debug\net6.0\MediatR.dll
 c:\Users\dusan\OneDrive\Desktop\GoDeliver\src\Services\RestaurantService\Restaurant.API\bin\Debug\net6.0\MediatR.Contracts.dll
+c:\Users\dusan\OneDrive\Desktop\GoDeliver\src\Services\RestaurantService\Restaurant.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

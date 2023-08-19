@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H3YrnHBwqD3VjKGK2KTgW/fAzKj7+KDnHA4/nCoLlIfM4RUwuduczh5NJdJ9gk0I5Lge6w1Opz/YFuipHVrDTQ==",
+  "dgSpecHash": "ese3saboykO5fnJBwKVkWDEcyT2NAJYDxWYhfGmTXRpmuNySmCDtJ6wHdQ2jBbCb1747+EcmEXY6Qzq/m/l7AA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\Restaurant.API.csproj",
+  "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\Restaurant.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dusan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -10,6 +10,7 @@
     "C:\\Users\\dusan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\dusan\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.21\\microsoft.aspnetcore.authentication.jwtbearer.6.0.21.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",

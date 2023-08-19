@@ -46,5 +46,21 @@ namespace Infrastracture.Data.Repositories.Review
             return result > 0;
 
         }
+
+        public async Task<bool> DeleteReview(deleteReviewRequestDto request)
+        {
+
+            var reviewToDelete = await _context.Reviews.FindAsync(request.Id);
+            if (reviewToDelete == null)
+            {
+                return false;
+
+            }
+
+            _context.Reviews.Remove(reviewToDelete);
+            var result = _context.SaveChanges() > 0;
+
+            return result;
+        }
     }
 }

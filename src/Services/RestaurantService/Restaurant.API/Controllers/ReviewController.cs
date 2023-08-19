@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Application.Commands.Review;
 using Domain.Models.Review;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Restaurant.API.Controllers
@@ -49,6 +51,26 @@ namespace Restaurant.API.Controllers
             return Ok(message);
 
         }
+
+
+        [Authorize]
+        [HttpDelete("delete/{Id}")]
+        public IActionResult DeleteReview([FromQuery] deleteReviewRequestDto request)
+        {
+
+
+            var user = User.FindFirst(ClaimTypes.NameIdentifier);
+
+            return Ok(user.Value);
+
+
+
+
+
+        }
+
+
+
 
 
     }

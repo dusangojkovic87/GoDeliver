@@ -10,6 +10,7 @@ namespace Domain.Repositories.Review
     {
 
         Task<bool> AddReviewToRestaurant(AddReviewRequestDto request);
+        Task<bool> DeleteReview(deleteReviewRequestDto request);
 
 
 

@@ -84,11 +84,13 @@ namespace Application.Handlers
 
             var tokenOptions = new JwtSecurityToken(
                     issuer: issuer,
-                    audience: audience,
                     claims: claims,
+                    audience: audience,
                     expires: DateTime.UtcNow.AddMinutes(expiryInMinutes),
                     signingCredentials: credentials
            );
+
+
 
             var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
             return token;
