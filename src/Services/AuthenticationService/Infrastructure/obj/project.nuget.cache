@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P674UHLJxnV+agxMGOX46UDlYLt1LbA5RGOQa5KPZZzPC4MKOvLr+X9y18H6UJ79Pjnku3d5b960ZEo0dEuRcA==",
+  "dgSpecHash": "juEhVlY0gbRMk/lcwBqHzyaF5kfseFbbrb9Il/KJehoMlgAKheSyAmf6ULg6xNtF8YRtevYRXL6TYJKGwitmgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [

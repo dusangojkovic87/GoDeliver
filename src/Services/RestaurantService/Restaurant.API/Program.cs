@@ -38,14 +38,14 @@ using RestaurantService.Infrastracture.Extensions;
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
     {
         var jwtSettings = builder.Configuration.GetSection("JwtConfig");
-        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("sdhshsfdghsfhgdfvbdfbnfthjfghnfgbncxvbsd"));
+        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]));
         opt.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = "http://localhost:5001",
-            ValidAudience = "http://localhost:5002",
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidAudience = jwtSettings["Audience"],
             IssuerSigningKey = secretKey
         };
 

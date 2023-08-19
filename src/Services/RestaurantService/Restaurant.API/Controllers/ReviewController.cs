@@ -61,7 +61,7 @@ namespace Restaurant.API.Controllers
 
             var user = User.FindFirst(ClaimTypes.NameIdentifier);
 
-            return Ok(user.Value);
+            return Ok("test2");
 
 
 
