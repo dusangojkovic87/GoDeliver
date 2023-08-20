@@ -98,6 +98,13 @@ namespace Infrastracture.Data.Repositories.Review
             return result;
         }
 
+        public Task<IEnumerable<Domain.Entities.Review>> GetReviewsByRestaurant(GetReviewsByRestaurantIdRequestDto requestDto)
+        {
+
+            var reviews = _context.Reviews.Where(r => r.RestaurantId == requestDto.restaurantId).ToList();
+            return Task.FromResult<IEnumerable<Domain.Entities.Review>>(reviews);
+        }
+
         public async Task<bool> UpdateReview(updateReviewRequestDto requestDto)
         {
 

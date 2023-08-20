@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Application.Commands.Review;
+using Application.Queries.Review;
 using Domain.Models.Review;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -84,7 +85,7 @@ namespace Restaurant.API.Controllers
 
         }
 
-
+        [Authorize]
         [HttpPost("update/{Id}")]
         public async Task<IActionResult> UpdateReview(int Id, [FromBody] updateReviewRequestDto requestDto)
         {
@@ -110,6 +111,22 @@ namespace Restaurant.API.Controllers
 
             return Ok("review updated");
 
+
+        }
+
+
+        [HttpGet("all/{Id}")]
+        public async Task<IActionResult> GetReviewsByRestaurantId(int Id)
+        {
+            var request = new GetReviewsByRestaurantIdQuery
+            {
+                Id = Id
+            };
+
+
+            var result = await _mediator.Send(request);
+
+            return Ok(result);
 
         }
 

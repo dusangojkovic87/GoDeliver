@@ -37,6 +37,14 @@ namespace Application.Services.Review
 
         }
 
+        public async Task<IEnumerable<Domain.Entities.Review>> GetReviewsByRestaurantAsync(GetReviewsByRestaurantIdRequestDto request)
+        {
+
+            var result = await _reviewRepository.GetReviewsByRestaurant(request);
+
+            return result;
+        }
+
         public async Task<bool> UpdateReviewAsync(updateReviewRequestDto request)
         {
             var result = await _reviewRepository.UpdateReview(request);

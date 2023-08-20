@@ -12,6 +12,7 @@ using Application.Handlers.Review;
 using Application.Queries;
 using Application.Queries.Restaurant;
 using Application.Queries.Restaurants;
+using Application.Queries.Review;
 using Domain.Entities;
 using Domain.Models;
 using MediatR;
@@ -37,6 +38,7 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<AddReviewCommand, bool>, AddReviewCommandHandler>();
             service.AddScoped<IRequestHandler<deleteReviewByIdCommand, bool>, DeleteReviewByIdCommandHandler>();
             service.AddScoped<IRequestHandler<updateReviewCommand, bool>, UpdateReviewCommandHandler>();
+            service.AddScoped<IRequestHandler<GetReviewsByRestaurantIdQuery, IEnumerable<Domain.Entities.Review>>, GetReviewsByRestaurantIdQueryHandler>();
             return service;
 
         }
