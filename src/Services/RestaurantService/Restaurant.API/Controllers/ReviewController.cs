@@ -55,13 +55,32 @@ namespace Restaurant.API.Controllers
 
         [Authorize]
         [HttpDelete("delete/{Id}")]
-        public IActionResult DeleteReview([FromQuery] deleteReviewRequestDto request)
+        public async Task<IActionResult> DeleteReview(int Id)
         {
 
+            var loggedUserEmail = User.FindFirst(ClaimTypes.Email).Value;
 
-            var user = User.FindFirst(ClaimTypes.NameIdentifier);
+            var deleteReviewRequest = new deleteReviewByIdCommand
+            {
+                Id = Id,
+                userEmail = loggedUserEmail
 
-            return Ok("test2");
+            };
+
+            var result = await _mediator.Send(deleteReviewRequest);
+
+            if (!result)
+            {
+                return BadRequest("Error,review not deleted!");
+
+            }
+
+            var response = new
+            {
+                Message = "Review deleted!"
+            };
+
+            return Ok(response);
 
 
 

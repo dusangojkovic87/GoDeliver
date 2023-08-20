@@ -15,7 +15,7 @@ namespace Domain.Entities
         public string UserName { get; set; }
         public string Comment { get; set; }
         [Required]
-        public int Rating { get; set; }
+        public float Rating { get; set; }
         [Required]
         public DateTime DatePosted { get; set; }
 

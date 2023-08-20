@@ -9,6 +9,6 @@ namespace Application.Interfaces.Review
     public interface IReviewService
     {
         Task<bool> AddReviewAsync(AddReviewRequestDto request);
-        Task<bool> DeleteReviewByIdAsync(deleteReviewRequestDto request);
+        bool DeleteReviewById(deleteReviewRequestDto request);
     }
 }

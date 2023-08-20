@@ -20,13 +20,13 @@ namespace Infrastracture.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<MenuItem>()
-            .Property(propertyExpression => propertyExpression.Price).
-            HasPrecision(18, 2);
+            /*   builder.Entity<MenuItem>()
+              .Property(propertyExpression => propertyExpression.Price).
+              HasPrecision(18, 2);
 
-            builder.Entity<Menu>().Property(propertyExpression => propertyExpression.Price).HasPrecision(18, 2);
+              builder.Entity<Menu>().Property(propertyExpression => propertyExpression.Price).HasPrecision(18, 2);
 
-            base.OnModelCreating(builder);
+              base.OnModelCreating(builder); */
 
         }
 

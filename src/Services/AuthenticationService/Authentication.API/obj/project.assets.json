@@ -3920,11 +3920,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
+      "projectUniqueName": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
       "projectName": "Authentication.API",
-      "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
+      "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
       "packagesPath": "C:\\Users\\dusan\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\obj\\",
+      "outputPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3949,8 +3949,8 @@
             "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Application\\Application.csproj"
             },
-            "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj"
+            "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj"
             },
             "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Infrastructure\\Infrastructure.csproj"

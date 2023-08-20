@@ -25,7 +25,7 @@ namespace Application.Handlers.Review
         }
 
 
-        public async Task<bool> Handle(deleteReviewByIdCommand request, CancellationToken cancellationToken)
+        public Task<bool> Handle(deleteReviewByIdCommand request, CancellationToken cancellationToken)
         {
 
             var validationResult = _validator.Validate(request);
@@ -37,13 +37,19 @@ namespace Application.Handlers.Review
 
             var review = new deleteReviewRequestDto
             {
-                Id = request.Id
+                Id = request.Id,
+                userEmail = request.userEmail
 
             };
 
-            var result = await _reviewServise.DeleteReviewByIdAsync(review);
-            return result;
+            var result = _reviewServise.DeleteReviewById(review);
+
+
+
+            return Task.FromResult(result);
 
         }
+
+
     }
 }

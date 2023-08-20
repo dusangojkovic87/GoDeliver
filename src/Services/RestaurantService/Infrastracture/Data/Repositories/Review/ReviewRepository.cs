@@ -47,15 +47,44 @@ namespace Infrastracture.Data.Repositories.Review
 
         }
 
-        public async Task<bool> DeleteReview(deleteReviewRequestDto request)
+
+        public bool CheckIfReviewBelongsToUser(deleteReviewRequestDto requestDto)
         {
 
-            var reviewToDelete = await _context.Reviews.FindAsync(request.Id);
+            var review = _context.Reviews.FirstOrDefault(r => r.Id == requestDto.Id);
+            if (review == null)
+            {
+                return false;
+            }
+
+            if (review.UserName == requestDto.userEmail)
+            {
+                return true;
+            }
+
+            return false;
+
+        }
+
+        public bool DeleteReview(deleteReviewRequestDto request)
+        {
+
+            //    var reviewToDelete = _context.Reviews.FirstOrDefault(r => r.Id == reviewId);
+            var reviewToDelete = _context.Reviews.Find(request.Id);
             if (reviewToDelete == null)
             {
                 return false;
 
             }
+
+            var doesReviewBelongsToUser = CheckIfReviewBelongsToUser(request);
+
+            if (!doesReviewBelongsToUser)
+            {
+                return false;
+            }
+
+
 
             _context.Reviews.Remove(reviewToDelete);
             var result = _context.SaveChanges() > 0;

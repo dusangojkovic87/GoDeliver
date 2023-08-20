@@ -9,6 +9,7 @@ namespace Application.Commands.Review
     public class deleteReviewByIdCommand : IRequest<bool>
     {
         public int Id { get; set; }
+        public string userEmail { get; set; }
 
     }
 }

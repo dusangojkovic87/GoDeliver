@@ -920,8 +920,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj"
+            "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj"
             },
             "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Shared\\Shared.csproj": {
               "projectPath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Shared\\Shared.csproj"

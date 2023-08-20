@@ -26,9 +26,9 @@ namespace Application.Services.Review
             return result;
         }
 
-        public async Task<bool> DeleteReviewByIdAsync(deleteReviewRequestDto request)
+        public bool DeleteReviewById(deleteReviewRequestDto request)
         {
-            var result = await _reviewRepository.DeleteReview(request);
+            var result = _reviewRepository.DeleteReview(request);
 
             return result;
 
