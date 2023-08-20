@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces;
 using Application.Interfaces.Review;
+using Application.Interfaces.Table;
 using Application.Services;
 using Application.Services.Review;
+using Application.Services.Table;
 
 namespace Restaurant.API.Extensions
 {
@@ -19,6 +21,8 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRestaurantService, Application.Services.RestaurantService>();
             //review
             service.AddScoped<IReviewService, ReviewService>();
+            //table
+            service.AddScoped<ITableService, TableService>();
 
             return service;
 

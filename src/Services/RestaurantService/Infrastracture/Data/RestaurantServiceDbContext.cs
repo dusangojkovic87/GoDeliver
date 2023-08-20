@@ -36,6 +36,7 @@ namespace Infrastracture.Data
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Table> Tables { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
 
         public DbSet<Staff> Staff { get; set; }
         public DbSet<PaymentMethod> PaymentMethods { get; set; }

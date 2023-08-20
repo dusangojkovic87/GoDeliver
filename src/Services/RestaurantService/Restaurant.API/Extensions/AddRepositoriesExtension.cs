@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Repositories;
 using Domain.Repositories.Review;
+using Domain.Repositories.Table;
 using Infrastracture.Data.Repositories;
 using Infrastracture.Data.Repositories.Review;
+using Infrastracture.Data.Repositories.Table;
 
 namespace Restaurant.API.Extensions
 {
@@ -20,6 +22,8 @@ namespace Restaurant.API.Extensions
             services.AddScoped<IRestaurantRepository, RestaurantRepository>();
             //review
             services.AddScoped<IReviewRepository, ReviewRepository>();
+            //table
+            services.AddScoped<ITableRepository, TableRepository>();
 
 
 
