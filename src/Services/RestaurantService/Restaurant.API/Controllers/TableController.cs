@@ -44,5 +44,32 @@ namespace Restaurant.API.Controllers
 
         }
 
+
+        [HttpPost("update/{tableId}")]
+        public async Task<IActionResult> UpdateTable(int tableId, updateTableRequestDto requestDto)
+        {
+
+            var request = new UpdateTableCommand
+            {
+                Id = tableId,
+                SeatingCapacity = requestDto.SeatingCapacity,
+                TableNumber = requestDto.TableNumber
+
+            };
+
+            var result = await _mediator.Send(request);
+
+            if (!result)
+            {
+                return BadRequest("Error,table not updated!");
+
+            }
+
+            return Ok("Table updated!");
+
+
+
+        }
+
     }
 }

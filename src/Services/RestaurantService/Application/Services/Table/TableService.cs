@@ -25,6 +25,10 @@ namespace Application.Services.Table
 
         }
 
-
+        public async Task<bool> UpdateTableAsync(updateTableRequestDto requestDto)
+        {
+            var result = await _tableRepository.UpdateTable(requestDto);
+            return result;
+        }
     }
 }

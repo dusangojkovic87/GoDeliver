@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application.Commands;
 using Application.Commands.Restaurant;
 using Application.Commands.Review;
+using Application.Commands.Table;
 using Application.Handlers.Review;
 using Application.Validators;
 using Application.Validators.Review;
@@ -24,6 +25,8 @@ namespace Restaurant.API.Extensions
             //review
             services.AddScoped<IValidator<deleteReviewByIdCommand>, DeleteReviewByIdValidator>();
             services.AddScoped<IValidator<updateReviewCommand>, UpdateReviewValidator>();
+            //table
+            services.AddScoped<IValidator<UpdateTableCommand>, UpdateTableValidator>();
 
             return services;
 

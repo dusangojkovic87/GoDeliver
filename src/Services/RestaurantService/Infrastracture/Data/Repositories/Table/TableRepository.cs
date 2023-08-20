@@ -34,5 +34,30 @@ namespace Infrastracture.Data.Repositories.Table
             var result = await _context.SaveChangesAsync() > 0;
             return result;
         }
+
+        public async Task<Domain.Entities.Table> GetTableByIdAsync(int Id)
+        {
+            var result = await _context.Tables.FindAsync(Id);
+            return result;
+        }
+
+        public async Task<bool> UpdateTable(updateTableRequestDto requestDto)
+        {
+            var tableToUpdate = await GetTableByIdAsync(requestDto.Id);
+            if (tableToUpdate == null)
+            {
+                return false;
+
+            }
+
+            tableToUpdate.TableNumber = requestDto.TableNumber;
+            tableToUpdate.SeatingCapacity = requestDto.SeatingCapacity;
+
+            var rowsAffected = await _context.SaveChangesAsync();
+            return rowsAffected > 0;
+
+        }
+
+
     }
 }

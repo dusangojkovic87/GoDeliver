@@ -43,6 +43,7 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<GetReviewsByRestaurantIdQuery, IEnumerable<Domain.Entities.Review>>, GetReviewsByRestaurantIdQueryHandler>();
             //table
             service.AddScoped<IRequestHandler<AddTableToRestaurantCommand, bool>, AddTableCommandHandler>();
+            service.AddScoped<IRequestHandler<UpdateTableCommand, bool>, UpdateTableCommandHandler>();
             return service;
 
         }
