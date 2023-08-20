@@ -36,5 +36,12 @@ namespace Application.Services.Review
 
 
         }
+
+        public async Task<bool> UpdateReviewAsync(updateReviewRequestDto request)
+        {
+            var result = await _reviewRepository.UpdateReview(request);
+
+            return result;
+        }
     }
 }

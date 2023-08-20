@@ -69,7 +69,6 @@ namespace Infrastracture.Data.Repositories.Review
         public bool DeleteReview(deleteReviewRequestDto request)
         {
 
-            //    var reviewToDelete = _context.Reviews.FirstOrDefault(r => r.Id == reviewId);
             var reviewToDelete = _context.Reviews.Find(request.Id);
             if (reviewToDelete == null)
             {
@@ -89,6 +88,29 @@ namespace Infrastracture.Data.Repositories.Review
             _context.Reviews.Remove(reviewToDelete);
             var result = _context.SaveChanges() > 0;
 
+            return result;
+        }
+
+        public async Task<Domain.Entities.Review> GetReviewByIdAsync(int Id)
+        {
+
+            var result = await _context.Reviews.FindAsync(Id);
+            return result;
+        }
+
+        public async Task<bool> UpdateReview(updateReviewRequestDto requestDto)
+        {
+
+            var reviewToUpdate = await GetReviewByIdAsync(requestDto.Id);
+
+            if (reviewToUpdate == null)
+            {
+                return false;
+            }
+
+            reviewToUpdate.Comment = requestDto.Comment;
+            reviewToUpdate.Rating = requestDto.Rating;
+            var result = await _context.SaveChangesAsync() > 0;
             return result;
         }
     }

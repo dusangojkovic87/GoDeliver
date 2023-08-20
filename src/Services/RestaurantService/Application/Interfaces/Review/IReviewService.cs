@@ -10,5 +10,6 @@ namespace Application.Interfaces.Review
     {
         Task<bool> AddReviewAsync(AddReviewRequestDto request);
         bool DeleteReviewById(deleteReviewRequestDto request);
+        Task<bool> UpdateReviewAsync(updateReviewRequestDto request);
     }
 }

@@ -12,6 +12,8 @@ namespace Domain.Repositories.Review
         Task<bool> AddReviewToRestaurant(AddReviewRequestDto request);
         bool DeleteReview(deleteReviewRequestDto request);
         bool CheckIfReviewBelongsToUser(deleteReviewRequestDto requestDto);
+        Task<Domain.Entities.Review> GetReviewByIdAsync(int Id);
+        Task<bool> UpdateReview(updateReviewRequestDto requestDto);
 
 
 

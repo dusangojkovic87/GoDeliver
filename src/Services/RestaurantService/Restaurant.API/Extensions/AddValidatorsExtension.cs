@@ -23,6 +23,7 @@ namespace Restaurant.API.Extensions
             services.AddScoped<IValidator<AddRestaurantCommand>, AddRestaurantValidator>();
             //review
             services.AddScoped<IValidator<deleteReviewByIdCommand>, DeleteReviewByIdValidator>();
+            services.AddScoped<IValidator<updateReviewCommand>, UpdateReviewValidator>();
 
             return services;
 

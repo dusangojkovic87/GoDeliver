@@ -82,8 +82,33 @@ namespace Restaurant.API.Controllers
 
             return Ok(response);
 
+        }
 
 
+        [HttpPost("update/{Id}")]
+        public async Task<IActionResult> UpdateReview(int Id, [FromBody] updateReviewRequestDto requestDto)
+        {
+            var loggedUserEmail = User.FindFirst(ClaimTypes.Email);
+
+            var request = new updateReviewCommand
+            {
+                Id = Id,
+                Comment = requestDto.Comment,
+                Rating = requestDto.Rating,
+                UserName = loggedUserEmail.Value
+
+
+            };
+
+            var result = await _mediator.Send(request);
+
+            if (!result)
+            {
+                return BadRequest("Error,review not updated!");
+
+            }
+
+            return Ok("review updated");
 
 
         }

@@ -36,6 +36,7 @@ namespace Restaurant.API.Extensions
             //review handlers
             service.AddScoped<IRequestHandler<AddReviewCommand, bool>, AddReviewCommandHandler>();
             service.AddScoped<IRequestHandler<deleteReviewByIdCommand, bool>, DeleteReviewByIdCommandHandler>();
+            service.AddScoped<IRequestHandler<updateReviewCommand, bool>, UpdateReviewCommandHandler>();
             return service;
 
         }
