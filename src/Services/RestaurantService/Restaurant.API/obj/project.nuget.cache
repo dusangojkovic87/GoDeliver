@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I2Lal1o72/MxwHJYAQtuVETle23MjWKXv332+PjHmjSGH8BkJT7ChLZ1H0s2/SIL1qjEkGFcVZ+vfQ5y48iZTQ==",
+  "dgSpecHash": "BMFvthWeqvDJ+a7tnRZwuTHW+YcejvpWMmAyv8rdO9yjQoxXOzZFFji6Ns8kJ34Ub4ral04cLjs4p30CkfgCjA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\Restaurant.API.csproj",
+  "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\Restaurant.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dusan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
