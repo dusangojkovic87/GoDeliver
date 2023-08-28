@@ -19,6 +19,7 @@ namespace Domain.Entities
         [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
+        public string Image { get; set; }
 
         public Menu Menu { get; set; }
         public ICollection<Category> Categories { get; set; }

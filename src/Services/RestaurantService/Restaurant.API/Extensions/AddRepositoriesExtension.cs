@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.Repositories;
+using Domain.Repositories.Menu;
 using Domain.Repositories.Review;
 using Domain.Repositories.Table;
 using Infrastracture.Data.Repositories;
+using Infrastracture.Data.Repositories.Menu;
 using Infrastracture.Data.Repositories.Review;
 using Infrastracture.Data.Repositories.Table;
 
@@ -24,6 +26,8 @@ namespace Restaurant.API.Extensions
             services.AddScoped<IReviewRepository, ReviewRepository>();
             //table
             services.AddScoped<ITableRepository, TableRepository>();
+            //menu
+            services.AddScoped<IMenuRepository, MenuRepository>();
 
 
 

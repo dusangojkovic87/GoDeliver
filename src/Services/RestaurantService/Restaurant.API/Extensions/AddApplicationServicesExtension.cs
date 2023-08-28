@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces;
+using Application.Interfaces.Menu;
 using Application.Interfaces.Review;
 using Application.Interfaces.Table;
 using Application.Services;
+using Application.Services.Menu;
 using Application.Services.Review;
 using Application.Services.Table;
 
@@ -23,6 +25,8 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IReviewService, ReviewService>();
             //table
             service.AddScoped<ITableService, TableService>();
+            //menu
+            service.AddScoped<IMenuService, MenuService>();
 
             return service;
 

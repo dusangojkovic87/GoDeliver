@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G4iStUYH/49+toe5tL4EwdlhZxeVvyQ69eTOxLAroFVbguCHj/EBDujCgeqgEJlulUCdJuCj2T/N/KYknVZzDQ==",
+  "dgSpecHash": "6XEMr8ayirBcY19+Qf0YKURDGQidYhRqe2xT/cgcw7gvenDbxGenPblkZcm3XeIu0dMY+VnegcPGuR7/TwBEoQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
+  "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dusan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\dusan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
