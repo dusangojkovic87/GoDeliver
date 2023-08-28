@@ -12,12 +12,12 @@ namespace Restaurant.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class Menu : ControllerBase
+    public class MenuController : ControllerBase
     {
         private readonly IMediator _mediator;
         public IWebHostEnvironment _webHostEnvironment { get; }
 
-        public Menu(IMediator mediator, IWebHostEnvironment webHostEnvironment)
+        public MenuController(IMediator mediator, IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
             _mediator = mediator;
@@ -99,6 +99,33 @@ namespace Restaurant.API.Controllers
             return Ok("Menu updated");
 
         }
+
+
+
+        [HttpDelete("delete/{Id}")]
+        public async Task<IActionResult> DeleteMenu(int Id)
+        {
+
+            var deleteRequest = new DeleteMenuCommand
+            {
+                Id = Id
+
+            };
+
+            var result = await _mediator.Send(deleteRequest);
+
+            if (!result)
+            {
+                return BadRequest("Error,menu not deleted!");
+            }
+
+            return Ok("Menu deleted!");
+
+
+
+        }
+
+
 
     }
 }

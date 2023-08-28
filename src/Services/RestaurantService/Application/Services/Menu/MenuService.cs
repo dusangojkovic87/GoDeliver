@@ -24,6 +24,12 @@ namespace Application.Services.Menu
             return result;
         }
 
+        public async Task<bool> DeleteMenuAsync(int Id)
+        {
+            var result = await _menuRepository.DeleteMenu(Id);
+            return result;
+        }
+
         public async Task<bool> UpdateMenu(int Id, updateMenuRequestDto requestDto)
         {
             var result = await _menuRepository.UpdateMenu(Id, requestDto);

@@ -10,5 +10,6 @@ namespace Application.Interfaces.Menu
     {
         Task<bool> AddMenuAsync(AddMenuRequestDto requestDto);
         Task<bool> UpdateMenu(int Id, updateMenuRequestDto requestDto);
+        Task<bool> DeleteMenuAsync(int Id);
     }
 }

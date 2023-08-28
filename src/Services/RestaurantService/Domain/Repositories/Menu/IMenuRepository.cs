@@ -11,6 +11,7 @@ namespace Domain.Repositories.Menu
         Task<bool> AddMenu(AddMenuRequestDto requestDto);
         Task<bool> UpdateMenu(int Id, updateMenuRequestDto requestDto);
         Task<Domain.Entities.Menu> GetMenuById(int Id);
+        Task<bool> DeleteMenu(int Id);
 
     }
 }

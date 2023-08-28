@@ -35,6 +35,22 @@ namespace Infrastracture.Data.Repositories.Menu
             return rowsAffected > 0;
         }
 
+        public async Task<bool> DeleteMenu(int Id)
+        {
+
+            var menuToDelete = await GetMenuById(Id);
+
+            if (menuToDelete == null)
+            {
+                return false;
+            }
+
+
+            _context.Remove(menuToDelete);
+            var rowsAffected = await _context.SaveChangesAsync();
+            return rowsAffected > 0;
+        }
+
         public async Task<Domain.Entities.Menu> GetMenuById(int Id)
         {
 
