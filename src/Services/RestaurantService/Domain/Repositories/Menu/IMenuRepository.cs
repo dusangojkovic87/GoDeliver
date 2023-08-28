@@ -9,5 +9,8 @@ namespace Domain.Repositories.Menu
     public interface IMenuRepository
     {
         Task<bool> AddMenu(AddMenuRequestDto requestDto);
+        Task<bool> UpdateMenu(int Id, updateMenuRequestDto requestDto);
+        Task<Domain.Entities.Menu> GetMenuById(int Id);
+
     }
 }

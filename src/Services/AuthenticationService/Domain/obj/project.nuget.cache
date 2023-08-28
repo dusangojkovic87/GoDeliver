@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "56MCqIvcsPr3r3BcxnBzh0hPurRsYmhCLdzZnHXt5a2Q1q5rcvc98k0KCYEf9JpMmyeeZGM1MCfKWyPK+He8bw==",
+  "dgSpecHash": "+0imGTw7At7XREhCfANbvd1/G9xjv0eUtc3Yg1FiqSaUyGRrc6Sh2evfzw9XHSp3+sLNYMF2ueaL53bGo+P0GA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj",
+  "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

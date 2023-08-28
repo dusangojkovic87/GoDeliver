@@ -17,6 +17,7 @@ using Application.Queries;
 using Application.Queries.Restaurant;
 using Application.Queries.Restaurants;
 using Application.Queries.Review;
+using Application.Validators.Menu;
 using Domain.Entities;
 using Domain.Models;
 using MediatR;
@@ -49,6 +50,7 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<DeleteTableCommand, bool>, DeleteTableCommandHandler>();
             //menu
             service.AddScoped<IRequestHandler<AddMenuCommand, bool>, AddMenuCommandHandler>();
+            service.AddScoped<IRequestHandler<UpdateMenuCommand, bool>, UpdateMenuCommandHandler>();
             return service;
 
         }

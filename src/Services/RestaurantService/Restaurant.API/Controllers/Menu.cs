@@ -30,9 +30,12 @@ namespace Restaurant.API.Controllers
         {
             var root = _webHostEnvironment.ContentRootPath;
             var imagePath = Path.Combine(root, "wwwroot", "images");
-            var imageName = UploadImageHelper.UploadImage(imageFile, imagePath, imageFile.Name, imageFile.ContentType);
+            var imageName = "default.png";
+            if (imageFile != null)
+            {
+                imageName = UploadImageHelper.UploadImage(imageFile, imagePath, imageFile.Name, imageFile.ContentType);
 
-
+            }
 
 
             var addMenuRequest = new AddMenuCommand
@@ -55,6 +58,45 @@ namespace Restaurant.API.Controllers
 
             return Ok("Menu added!");
 
+
+        }
+
+
+        [HttpPost("update/{Id}")]
+        public async Task<IActionResult> UpdateMenu(int Id, [FromForm] updateMenuRequestDto requestDto, [FromForm] IFormFile imageFile)
+        {
+
+            var root = _webHostEnvironment.ContentRootPath;
+            var path = Path.Combine(root, "wwwroot", "images");
+            var imageName = "default.png";
+
+            if (imageFile != null)
+            {
+                imageName = UploadImageHelper.UploadImage(imageFile, path, imageFile.FileName, imageFile.ContentType);
+
+            }
+
+
+            var updateRequest = new UpdateMenuCommand
+            {
+                Id = Id,
+                Name = requestDto.Name,
+                Price = requestDto.Price,
+                Description = requestDto.Description,
+                Image = imageName
+
+            };
+
+
+            var result = await _mediator.Send(updateRequest);
+
+            if (!result)
+            {
+                return BadRequest("Error,menu not updated");
+
+            }
+
+            return Ok("Menu updated");
 
         }
 

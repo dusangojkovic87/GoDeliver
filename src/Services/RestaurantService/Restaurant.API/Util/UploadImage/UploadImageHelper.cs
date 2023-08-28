@@ -18,7 +18,7 @@ namespace Restaurant.API.Util.UploadImage
 
                 string fullPath = Path.Combine(uploadPath, uniqueFilename);
 
-                if (!contentType.Equals("image/png") || !contentType.Equals("image/jpg"))
+                if (!contentType.Equals("image/png") && !contentType.Equals("image/jpeg"))
                 {
                     throw new CustomValidationException(new List<string> { "Image must be in png or jpg format" });
 
