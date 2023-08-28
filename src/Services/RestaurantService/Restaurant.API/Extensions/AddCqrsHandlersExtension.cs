@@ -44,6 +44,7 @@ namespace Restaurant.API.Extensions
             //table
             service.AddScoped<IRequestHandler<AddTableToRestaurantCommand, bool>, AddTableCommandHandler>();
             service.AddScoped<IRequestHandler<UpdateTableCommand, bool>, UpdateTableCommandHandler>();
+            service.AddScoped<IRequestHandler<DeleteTableCommand, bool>, DeleteTableCommandHandler>();
             return service;
 
         }

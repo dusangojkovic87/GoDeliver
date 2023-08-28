@@ -10,5 +10,6 @@ namespace Application.Interfaces.Table
     {
         Task<bool> AddTableAsync(AddTableToRestaurantRequestDto requestDto);
         Task<bool> UpdateTableAsync(updateTableRequestDto requestDto);
+        Task<bool> DeleteTableAsync(deleteTableRequestDto requestDto);
     }
 }

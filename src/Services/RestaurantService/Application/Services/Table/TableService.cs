@@ -25,6 +25,12 @@ namespace Application.Services.Table
 
         }
 
+        public async Task<bool> DeleteTableAsync(deleteTableRequestDto requestDto)
+        {
+            var result = await _tableRepository.DeleteTable(requestDto.Id);
+            return result;
+        }
+
         public async Task<bool> UpdateTableAsync(updateTableRequestDto requestDto)
         {
             var result = await _tableRepository.UpdateTable(requestDto);

@@ -11,5 +11,6 @@ namespace Domain.Repositories.Table
         Task<bool> AddTableToRestaurant(AddTableToRestaurantRequestDto requestDto);
         Task<bool> UpdateTable(updateTableRequestDto requestDto);
         Task<Domain.Entities.Table> GetTableByIdAsync(int Id);
+        Task<bool> DeleteTable(int Id);
     }
 }

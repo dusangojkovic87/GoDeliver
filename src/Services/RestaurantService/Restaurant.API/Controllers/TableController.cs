@@ -71,5 +71,32 @@ namespace Restaurant.API.Controllers
 
         }
 
+
+        [HttpDelete("delete/{Id}")]
+        public async Task<IActionResult> DeleteTable(int Id)
+        {
+
+            var deleteTableRequest = new DeleteTableCommand
+            {
+                Id = Id
+            };
+
+            var result = await _mediator.Send(deleteTableRequest);
+
+            if (!result)
+            {
+                return BadRequest("Error,table not deleted!");
+
+            }
+
+            return Ok("Table deleted");
+
+
+
+        }
+
+
+
+
     }
 }

@@ -35,6 +35,21 @@ namespace Infrastracture.Data.Repositories.Table
             return result;
         }
 
+        public async Task<bool> DeleteTable(int Id)
+        {
+            var tableToDelete = await GetTableByIdAsync(Id);
+            if (tableToDelete == null)
+            {
+                return false;
+
+            }
+
+            _context.Tables.Remove(tableToDelete);
+            var rowsAffected = await _context.SaveChangesAsync();
+
+            return rowsAffected > 0;
+        }
+
         public async Task<Domain.Entities.Table> GetTableByIdAsync(int Id)
         {
             var result = await _context.Tables.FindAsync(Id);
