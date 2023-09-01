@@ -12,5 +12,6 @@ namespace Application.Interfaces.MenuItem
         Task<bool> DeleteMenuItemAsync(DeleteMenuItemRequestDto requestDto);
         Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto);
         Task<IEnumerable<Domain.Entities.MenuItem>> GetAllMenuItemsAsync();
+        Task<Domain.Entities.MenuItem> GetMenuItemByIdAsync(GetMenuItemByIdRequestDto requestDto);
     }
 }

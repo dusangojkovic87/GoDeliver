@@ -12,5 +12,6 @@ namespace Domain.Repositories.MenuItem
         Task<bool> DeleteMenuItem(DeleteMenuItemRequestDto requestDto);
         Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto);
         Task<IEnumerable<Domain.Entities.MenuItem>> GetAllMenuItems();
+        Task<Domain.Entities.MenuItem> GetMenuItemById(GetMenuItemByIdRequestDto requestDto);
     }
 }

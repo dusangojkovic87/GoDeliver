@@ -40,6 +40,37 @@ namespace Restaurant.API.Controllers
         }
 
 
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetMenuItemById([FromRoute] int Id)
+        {
+
+            if (Id < 0)
+            {
+                return BadRequest("Invalid Id");
+
+            }
+
+
+            var request = new GetMenuItemByIdQuery
+            {
+                Id = Id
+            };
+
+            var result = await _mediator.Send(request);
+
+            if (result == null)
+            {
+                return NotFound("Menu item not found");
+
+            }
+
+            return Ok(result);
+
+
+
+        }
+
+
 
 
 

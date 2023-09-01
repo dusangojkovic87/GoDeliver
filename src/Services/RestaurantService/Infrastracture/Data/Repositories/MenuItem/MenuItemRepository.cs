@@ -68,6 +68,12 @@ namespace Infrastracture.Data.Repositories.MenuItem
             return result;
         }
 
+        public async Task<Domain.Entities.MenuItem> GetMenuItemById(GetMenuItemByIdRequestDto requestDto)
+        {
+            var result = await _context.MenuItems.FindAsync(requestDto.Id);
+            return result;
+        }
+
         public async Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto)
         {
             var menuItemToUpdate = await _context.MenuItems.FindAsync(requestDto.Id);
