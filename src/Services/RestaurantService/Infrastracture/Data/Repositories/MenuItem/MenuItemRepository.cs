@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Models.MenuItem;
 using Domain.Repositories.MenuItem;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastracture.Data.Repositories.MenuItem
 {
@@ -59,6 +60,12 @@ namespace Infrastracture.Data.Repositories.MenuItem
             var affectedRows = await _context.SaveChangesAsync();
 
             return affectedRows > 0;
+        }
+
+        public async Task<IEnumerable<Domain.Entities.MenuItem>> GetAllMenuItems()
+        {
+            var result = await _context.MenuItems.ToListAsync();
+            return result;
         }
 
         public async Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto)

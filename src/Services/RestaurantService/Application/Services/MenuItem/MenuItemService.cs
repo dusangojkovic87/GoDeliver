@@ -35,6 +35,12 @@ namespace Application.Services.MenuItem
             return result;
         }
 
+        public async Task<IEnumerable<Domain.Entities.MenuItem>> GetAllMenuItemsAsync()
+        {
+            var result = await _menuItemRepository.GetAllMenuItems();
+            return result;
+        }
+
         public async Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto)
         {
             var result = await _menuItemRepository.UpdateMenuItem(requestDto);

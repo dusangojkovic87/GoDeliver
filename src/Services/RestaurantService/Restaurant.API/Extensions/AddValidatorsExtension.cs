@@ -4,12 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands;
 using Application.Commands.Menu;
+using Application.Commands.MenuItem;
 using Application.Commands.Restaurant;
 using Application.Commands.Review;
 using Application.Commands.Table;
 using Application.Handlers.Review;
 using Application.Validators;
 using Application.Validators.Menu;
+using Application.Validators.MenuItem;
 using Application.Validators.Review;
 using FluentValidation;
 
@@ -32,6 +34,9 @@ namespace Restaurant.API.Extensions
             //menu
             services.AddScoped<IValidator<AddMenuCommand>, AddMenuValidator>();
             services.AddScoped<IValidator<UpdateMenuCommand>, UpdateMenuValidator>();
+            //menuItem
+            services.AddScoped<IValidator<AddMenuItemCommand>, AddMenuItemValidator>();
+            services.AddScoped<IValidator<UpdateMenuItemCommand>, UpdateMenuItemValidator>();
 
             return services;
 

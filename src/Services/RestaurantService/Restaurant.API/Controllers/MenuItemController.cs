@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands.MenuItem;
+using Application.Queries.MenuItem;
 using Domain.Models.MenuItem;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,23 @@ namespace Restaurant.API.Controllers
             _mediator = mediator;
 
         }
+
+        [HttpGet("all")]
+        public async Task<IActionResult> GetAllMenuItems()
+        {
+
+            var GetRequest = new GetAllMenuItemsQuery
+            {
+
+            };
+
+            var result = await _mediator.Send(GetRequest);
+            return Ok(result);
+
+
+        }
+
+
 
 
 

@@ -16,6 +16,7 @@ using Application.Handlers.Restaurants;
 using Application.Handlers.Review;
 using Application.Handlers.Table;
 using Application.Queries;
+using Application.Queries.MenuItem;
 using Application.Queries.Restaurant;
 using Application.Queries.Restaurants;
 using Application.Queries.Review;
@@ -58,6 +59,7 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<AddMenuItemCommand, bool>, AddMenuItemCommandHandler>();
             service.AddScoped<IRequestHandler<DeleteMenuItemCommand, bool>, DeleteMenuItemCommandHandler>();
             service.AddScoped<IRequestHandler<UpdateMenuItemCommand, bool>, UpdateMenuItemCommandHandler>();
+            service.AddScoped<IRequestHandler<GetAllMenuItemsQuery, IEnumerable<Domain.Entities.MenuItem>>, GetAllMenuItemsQueryHandler>();
             return service;
 
         }
