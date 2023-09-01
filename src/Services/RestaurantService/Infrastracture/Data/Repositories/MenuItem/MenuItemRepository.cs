@@ -45,5 +45,20 @@ namespace Infrastracture.Data.Repositories.MenuItem
             return affectedRows > 0;
 
         }
+
+        public async Task<bool> DeleteMenuItem(DeleteMenuItemRequestDto requestDto)
+        {
+            var menuItemFromDb = await _context.MenuItems.FindAsync(requestDto.Id);
+            if (menuItemFromDb == null)
+            {
+                return false;
+            }
+
+
+            _context.Remove(menuItemFromDb);
+            var affectedRows = await _context.SaveChangesAsync();
+
+            return affectedRows > 0;
+        }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2PK/YU5rMmSBX1X9oLRJr93dmzd3GFzmlUnYoNBiMY8=",
+  "Hash": "2KOMJhRl88HVj8d1czoh9B3giZo3gj6yPo6rr/SAjCQ=",
   "Source": "Restaurant.API",
   "BasePath": "_content/Restaurant.API",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\menuitems\\1f9f32e7-b0bd-487b-8b3b-5024304b6d17IMG_20230401_090812.jpg"
+    },
+    {
+      "Identity": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\wwwroot\\images\\menuitems\\3a94891f-6892-43ef-b247-e7f8a2cb2a78IMG_20230401_090812.jpg",
+      "SourceId": "Restaurant.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\wwwroot\\",
+      "BasePath": "_content/Restaurant.API",
+      "RelativePath": "images/menuitems/3a94891f-6892-43ef-b247-e7f8a2cb2a78IMG_20230401_090812.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\menuitems\\3a94891f-6892-43ef-b247-e7f8a2cb2a78IMG_20230401_090812.jpg"
     },
     {
       "Identity": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\RestaurantService\\Restaurant.API\\wwwroot\\images\\menuitems\\60c4dfe0-aba2-4f05-a883-3c030944560dIMG_20230401_090812.jpg",

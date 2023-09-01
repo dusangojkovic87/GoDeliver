@@ -9,5 +9,6 @@ namespace Domain.Repositories.MenuItem
     public interface IMenuItemRepository
     {
         Task<bool> AddMenuItem(AddMenuItemRequestDto requestDto);
+        Task<bool> DeleteMenuItem(DeleteMenuItemRequestDto requestDto);
     }
 }

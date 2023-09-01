@@ -9,5 +9,6 @@ namespace Application.Interfaces.MenuItem
     public interface IMenuItemService
     {
         Task<bool> AddMenuItemAsync(AddMenuItemRequestDto requestDto);
+        Task<bool> DeleteMenuItemAsync(DeleteMenuItemRequestDto requestDto);
     }
 }

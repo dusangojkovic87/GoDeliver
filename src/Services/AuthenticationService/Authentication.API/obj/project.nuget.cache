@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mxiAwFfxso6Lok6I0c9JQ9rhXS2fLCWSIhLPUoCOIodzzLq7eXEfk4k2vCN+5V8pG9wR9ny5KFoEQQNC9x1tIw==",
+  "dgSpecHash": "G4iStUYH/49+toe5tL4EwdlhZxeVvyQ69eTOxLAroFVbguCHj/EBDujCgeqgEJlulUCdJuCj2T/N/KYknVZzDQ==",
   "success": true,
   "projectFilePath": "c:\\Users\\dusan\\OneDrive\\Desktop\\GoDeliver\\src\\Services\\AuthenticationService\\Authentication.API\\Authentication.API.csproj",
   "expectedPackageFiles": [
