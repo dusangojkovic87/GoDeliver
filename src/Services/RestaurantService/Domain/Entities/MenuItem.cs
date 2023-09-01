@@ -22,6 +22,7 @@ namespace Domain.Entities
         public string Image { get; set; }
 
         public Menu Menu { get; set; }
-        public ICollection<Category> Categories { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }

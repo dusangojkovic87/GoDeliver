@@ -28,14 +28,17 @@ namespace Restaurant.API.Controllers
         [HttpPost("add/{Id}")]
         public async Task<IActionResult> AddMenuToRestaurant(int Id, [FromForm] AddMenuRequestDto requestDto, [FromForm] IFormFile imageFile)
         {
-            var root = _webHostEnvironment.ContentRootPath;
-            var imagePath = Path.Combine(root, "wwwroot", "images");
-            var imageName = "default.png";
+            var root = _webHostEnvironment.WebRootPath;
+            var path = Path.Combine(root, "images");
+            var imageName = "images/default.png";
             if (imageFile != null)
             {
-                imageName = UploadImageHelper.UploadImage(imageFile, imagePath, imageFile.Name, imageFile.ContentType);
+                imageName = UploadImageHelper.UploadImage(imageFile, path, imageFile.Name, imageFile.ContentType);
 
             }
+
+            var pathToImage = Path.Combine(path, imageName);
+
 
 
             var addMenuRequest = new AddMenuCommand
@@ -44,7 +47,7 @@ namespace Restaurant.API.Controllers
                 Name = requestDto.Name,
                 Description = requestDto.Description,
                 Price = requestDto.Price,
-                Image = imageName
+                Image = pathToImage
 
             };
 
@@ -66,15 +69,17 @@ namespace Restaurant.API.Controllers
         public async Task<IActionResult> UpdateMenu(int Id, [FromForm] updateMenuRequestDto requestDto, [FromForm] IFormFile imageFile)
         {
 
-            var root = _webHostEnvironment.ContentRootPath;
-            var path = Path.Combine(root, "wwwroot", "images");
-            var imageName = "default.png";
+            var root = _webHostEnvironment.WebRootPath;
+            var path = Path.Combine(root, "images");
+            var imageName = "images/default.png";
 
             if (imageFile != null)
             {
                 imageName = UploadImageHelper.UploadImage(imageFile, path, imageFile.FileName, imageFile.ContentType);
 
             }
+
+            var pathToImage = Path.Combine(path, imageName);
 
 
             var updateRequest = new UpdateMenuCommand
@@ -83,7 +88,7 @@ namespace Restaurant.API.Controllers
                 Name = requestDto.Name,
                 Price = requestDto.Price,
                 Description = requestDto.Description,
-                Image = imageName
+                Image = pathToImage
 
             };
 

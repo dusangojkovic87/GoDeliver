@@ -14,9 +14,10 @@ namespace Restaurant.API.Util.UploadImage
 
             try
             {
-                string uniqueFilename = $"{Guid.NewGuid()}{filename}";
 
+                string uniqueFilename = $"{Guid.NewGuid()}{filename}";
                 string fullPath = Path.Combine(uploadPath, uniqueFilename);
+
 
                 if (!contentType.Equals("image/png") && !contentType.Equals("image/jpeg"))
                 {

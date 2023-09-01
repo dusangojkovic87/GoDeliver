@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands;
 using Application.Commands.Menu;
+using Application.Commands.MenuItem;
 using Application.Commands.Restaurant;
 using Application.Commands.Review;
 using Application.Commands.Table;
 using Application.Handlers;
 using Application.Handlers.Menu;
+using Application.Handlers.MenuItem;
 using Application.Handlers.Restaurant;
 using Application.Handlers.Restaurants;
 using Application.Handlers.Review;
@@ -52,6 +54,8 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<AddMenuCommand, bool>, AddMenuCommandHandler>();
             service.AddScoped<IRequestHandler<UpdateMenuCommand, bool>, UpdateMenuCommandHandler>();
             service.AddScoped<IRequestHandler<DeleteMenuCommand, bool>, DeleteMenuCommandHandler>();
+            //menuitem
+            service.AddScoped<IRequestHandler<AddMenuItemCommand, bool>, AddMenuItemCommandHandler>();
             return service;
 
         }
