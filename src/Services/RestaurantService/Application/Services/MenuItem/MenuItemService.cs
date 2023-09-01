@@ -34,5 +34,11 @@ namespace Application.Services.MenuItem
             var result = _menuItemRepository.DeleteMenuItem(requestDto);
             return result;
         }
+
+        public async Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto)
+        {
+            var result = await _menuItemRepository.UpdateMenuItem(requestDto);
+            return result;
+        }
     }
 }

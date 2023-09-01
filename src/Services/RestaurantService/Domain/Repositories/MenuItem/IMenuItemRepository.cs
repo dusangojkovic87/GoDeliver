@@ -10,5 +10,6 @@ namespace Domain.Repositories.MenuItem
     {
         Task<bool> AddMenuItem(AddMenuItemRequestDto requestDto);
         Task<bool> DeleteMenuItem(DeleteMenuItemRequestDto requestDto);
+        Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto);
     }
 }

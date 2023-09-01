@@ -89,6 +89,47 @@ namespace Restaurant.API.Controllers
         }
 
 
+        [HttpPost("update/{Id}")]
+        public async Task<IActionResult> UpdateMenuItem([FromRoute] int Id, [FromForm] UpdateMenuItemRequestDto requestDto, [FromForm] IFormFile imageFile)
+        {
+            var root = _webHostEnvironment.WebRootPath;
+            var path = Path.Combine(root, "images", "menuitems");
+            var imageName = "images/menuitems/default.png";
+
+            if (imageFile != null)
+            {
+                imageName = Util.UploadImage.UploadImageHelper.UploadImage(imageFile, path, imageFile.FileName, imageFile.ContentType);
+
+            }
+
+            var pathToImage = Path.Combine(path, imageName);
+
+            var updateRequest = new UpdateMenuItemCommand
+            {
+                Id = Id,
+                Name = requestDto.Name,
+                Description = requestDto.Description,
+                Price = requestDto.Price,
+                Image = pathToImage
+
+            };
+
+            var result = await _mediator.Send(updateRequest);
+            if (!result)
+            {
+                return BadRequest("Error,menuitem not updated!");
+            }
+
+            return Ok("menu item updated!");
+
+
+
+
+        }
+
+
+
+
 
 
 

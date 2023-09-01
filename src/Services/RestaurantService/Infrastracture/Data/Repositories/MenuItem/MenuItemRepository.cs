@@ -60,5 +60,24 @@ namespace Infrastracture.Data.Repositories.MenuItem
 
             return affectedRows > 0;
         }
+
+        public async Task<bool> UpdateMenuItem(UpdateMenuItemRequestDto requestDto)
+        {
+            var menuItemToUpdate = await _context.MenuItems.FindAsync(requestDto.Id);
+            if (menuItemToUpdate == null)
+            {
+                return false;
+
+            }
+
+            menuItemToUpdate.Name = requestDto.Name;
+            menuItemToUpdate.Description = requestDto.Description;
+            menuItemToUpdate.Price = requestDto.Price;
+            menuItemToUpdate.Image = requestDto.Image;
+
+            var affectedRows = await _context.SaveChangesAsync();
+            return affectedRows > 0;
+
+        }
     }
 }

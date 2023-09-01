@@ -57,6 +57,7 @@ namespace Restaurant.API.Extensions
             //menuitem
             service.AddScoped<IRequestHandler<AddMenuItemCommand, bool>, AddMenuItemCommandHandler>();
             service.AddScoped<IRequestHandler<DeleteMenuItemCommand, bool>, DeleteMenuItemCommandHandler>();
+            service.AddScoped<IRequestHandler<UpdateMenuItemCommand, bool>, UpdateMenuItemCommandHandler>();
             return service;
 
         }
