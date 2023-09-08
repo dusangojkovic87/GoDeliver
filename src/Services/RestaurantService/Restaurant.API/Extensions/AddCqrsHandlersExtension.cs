@@ -14,12 +14,14 @@ using Application.Handlers.MenuItem;
 using Application.Handlers.Restaurant;
 using Application.Handlers.Restaurants;
 using Application.Handlers.Review;
+using Application.Handlers.Staff;
 using Application.Handlers.Table;
 using Application.Queries;
 using Application.Queries.MenuItem;
 using Application.Queries.Restaurant;
 using Application.Queries.Restaurants;
 using Application.Queries.Review;
+using Application.Queries.Staff;
 using Application.Validators.Menu;
 using Domain.Entities;
 using Domain.Models;
@@ -61,6 +63,8 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<UpdateMenuItemCommand, bool>, UpdateMenuItemCommandHandler>();
             service.AddScoped<IRequestHandler<GetAllMenuItemsQuery, IEnumerable<Domain.Entities.MenuItem>>, GetAllMenuItemsQueryHandler>();
             service.AddScoped<IRequestHandler<GetMenuItemByIdQuery, Domain.Entities.MenuItem>, GetMenuItemByIdQueryHandler>();
+            //staff
+            service.AddScoped<IRequestHandler<GetAllStaffQuery, IEnumerable<Domain.Entities.Staff>>, GetStaffQueryHandler>();
             return service;
 
         }
