@@ -1,3 +1,5 @@
+using System.Data.Common;
+using System.Net.Sockets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,5 +25,15 @@ namespace Infrastracture.Data.Repositories.Staff
             return staff;
 
         }
+
+        public async Task<Domain.Entities.Staff> GetStaffMember(int Id)
+        {
+            var member = await _context.Staff.FindAsync(Id);
+            return member;
+
+
+        }
+
+
     }
 }

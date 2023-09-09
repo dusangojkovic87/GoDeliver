@@ -8,5 +8,6 @@ namespace Application.Interfaces.Staff
     public interface IStaffService
     {
         Task<IEnumerable<Domain.Entities.Staff>> GetAllStaffAsync();
+        Task<Domain.Entities.Staff> GetStaffMemberAsync(int Id);
     }
 }

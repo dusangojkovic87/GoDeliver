@@ -23,5 +23,11 @@ namespace Application.Services.Staff
             return staff;
 
         }
+
+        public async Task<Domain.Entities.Staff> GetStaffMemberAsync(int Id)
+        {
+            var member = await _staffRepository.GetStaffMember(Id);
+            return member;
+        }
     }
 }

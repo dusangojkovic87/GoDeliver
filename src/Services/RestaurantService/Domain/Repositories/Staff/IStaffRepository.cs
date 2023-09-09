@@ -8,5 +8,7 @@ namespace Domain.Repositories.Staff
     public interface IStaffRepository
     {
         Task<IEnumerable<Domain.Entities.Staff>> GetAllStaff();
+        Task<Domain.Entities.Staff> GetStaffMember(int Id);
+
     }
 }

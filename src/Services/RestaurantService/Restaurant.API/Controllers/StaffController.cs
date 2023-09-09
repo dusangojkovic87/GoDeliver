@@ -32,5 +32,34 @@ namespace Restaurant.API.Controllers
 
         }
 
+
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetStaffMember([FromRoute] int Id)
+        {
+
+            if (Id < 0)
+            {
+                return BadRequest("Not valid Staff Id");
+
+            }
+
+
+
+            var request = new GetStaffMemberQuery
+            {
+                Id = Id
+            };
+
+            var result = await _mediator.Send(request);
+
+            return Ok(result);
+
+
+
+
+        }
+
+
+
     }
 }
