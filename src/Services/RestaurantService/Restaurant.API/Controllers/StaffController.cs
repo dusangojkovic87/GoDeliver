@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Commands.Staff;
 using Application.Queries.Staff;
+using Domain.Models.Staff;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -54,10 +56,35 @@ namespace Restaurant.API.Controllers
 
             return Ok(result);
 
+        }
 
 
+        [HttpPost("add")]
+        public async Task<IActionResult> AddStaffMember([FromBody] AddStaffMemberRequestDto requestDto)
+        {
+            var addRequest = new AddStaffMemberCommand
+            {
+                RestaurantId = requestDto.RestaurantId,
+                Name = requestDto.Name,
+                Role = requestDto.Role
+
+            };
+
+            var result = await _mediator.Send(addRequest);
+
+            if (!result)
+            {
+                return BadRequest("Error,member not added!");
+
+            }
+
+            return Ok("Staff member added!");
 
         }
+
+
+
+
 
 
 

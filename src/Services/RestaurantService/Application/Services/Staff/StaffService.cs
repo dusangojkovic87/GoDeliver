@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces.Staff;
+using Domain.Models.Staff;
 using Domain.Repositories.Staff;
 
 namespace Application.Services.Staff
@@ -16,6 +17,11 @@ namespace Application.Services.Staff
             _staffRepository = staffRepository;
         }
 
+        public async Task<bool> AddStaffMemberAsync(AddStaffMemberRequestDto requestDto)
+        {
+            var result = await _staffRepository.AddStaffMember(requestDto);
+            return result;
+        }
 
         public async Task<IEnumerable<Domain.Entities.Staff>> GetAllStaffAsync()
         {

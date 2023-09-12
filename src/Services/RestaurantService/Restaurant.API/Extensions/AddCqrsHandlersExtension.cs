@@ -7,6 +7,7 @@ using Application.Commands.Menu;
 using Application.Commands.MenuItem;
 using Application.Commands.Restaurant;
 using Application.Commands.Review;
+using Application.Commands.Staff;
 using Application.Commands.Table;
 using Application.Handlers;
 using Application.Handlers.Menu;
@@ -66,6 +67,7 @@ namespace Restaurant.API.Extensions
             //staff
             service.AddScoped<IRequestHandler<GetAllStaffQuery, IEnumerable<Domain.Entities.Staff>>, GetStaffQueryHandler>();
             service.AddScoped<IRequestHandler<GetStaffMemberQuery, Domain.Entities.Staff>, GetStaffMemberQueryHandler>();
+            service.AddScoped<IRequestHandler<AddStaffMemberCommand, bool>, AddStaffMemberCommandHandler>();
             return service;
 
         }
