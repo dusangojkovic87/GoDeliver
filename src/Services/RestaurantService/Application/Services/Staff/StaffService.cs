@@ -35,5 +35,11 @@ namespace Application.Services.Staff
             var member = await _staffRepository.GetStaffMember(Id);
             return member;
         }
+
+        public async Task<bool> UpdateStaffMemberAsync(UpdateStaffMemberRequestDto requestDto)
+        {
+            var result = await _staffRepository.UpdateStaffMember(requestDto);
+            return result;
+        }
     }
 }

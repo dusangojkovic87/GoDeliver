@@ -50,6 +50,21 @@ namespace Infrastracture.Data.Repositories.Staff
 
         }
 
+        public async Task<bool> UpdateStaffMember(UpdateStaffMemberRequestDto requestDto)
+        {
 
+            var staffMember = await _context.Staff.FindAsync(requestDto.memberId);
+            if (staffMember == null)
+            {
+                return false;
+            }
+
+            staffMember.Name = requestDto.Name;
+            staffMember.Role = requestDto.Role;
+
+            var affectedRows = await _context.SaveChangesAsync();
+            return affectedRows > 0;
+
+        }
     }
 }

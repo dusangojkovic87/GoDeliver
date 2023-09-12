@@ -41,6 +41,7 @@ namespace Restaurant.API.Extensions
             services.AddScoped<IValidator<UpdateMenuItemCommand>, UpdateMenuItemValidator>();
             //staff
             services.AddScoped<IValidator<AddStaffMemberCommand>, AddStaffMemberValidator>();
+            services.AddScoped<IValidator<UpdateStaffMemberCommand>, UpdateStaffMemberValidator>();
 
             return services;
 

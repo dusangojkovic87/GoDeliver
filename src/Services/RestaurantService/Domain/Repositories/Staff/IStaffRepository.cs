@@ -11,6 +11,7 @@ namespace Domain.Repositories.Staff
         Task<IEnumerable<Domain.Entities.Staff>> GetAllStaff();
         Task<Domain.Entities.Staff> GetStaffMember(int Id);
         Task<bool> AddStaffMember(AddStaffMemberRequestDto requestDto);
+        Task<bool> UpdateStaffMember(UpdateStaffMemberRequestDto requestDto);
 
     }
 }

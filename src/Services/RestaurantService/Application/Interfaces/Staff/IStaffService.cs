@@ -11,5 +11,6 @@ namespace Application.Interfaces.Staff
         Task<IEnumerable<Domain.Entities.Staff>> GetAllStaffAsync();
         Task<Domain.Entities.Staff> GetStaffMemberAsync(int Id);
         Task<bool> AddStaffMemberAsync(AddStaffMemberRequestDto requestDto);
+        Task<bool> UpdateStaffMemberAsync(UpdateStaffMemberRequestDto requestDto);
     }
 }

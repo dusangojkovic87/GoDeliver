@@ -83,6 +83,35 @@ namespace Restaurant.API.Controllers
         }
 
 
+        [HttpPost("update")]
+        public async Task<IActionResult> UpdateStaffMember([FromBody] UpdateStaffMemberRequestDto requestDto)
+        {
+            var updateRequest = new UpdateStaffMemberCommand
+            {
+                memberId = requestDto.memberId,
+                Name = requestDto.Name,
+                Role = requestDto.Role
+
+            };
+
+            var result = await _mediator.Send(updateRequest);
+
+            if (!result)
+            {
+                return BadRequest("Update failed!");
+
+            }
+
+            return Ok("Staff member updated!");
+
+
+        }
+
+
+
+
+
+
 
 
 

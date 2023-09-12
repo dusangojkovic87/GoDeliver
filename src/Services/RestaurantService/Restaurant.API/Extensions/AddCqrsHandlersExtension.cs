@@ -68,6 +68,7 @@ namespace Restaurant.API.Extensions
             service.AddScoped<IRequestHandler<GetAllStaffQuery, IEnumerable<Domain.Entities.Staff>>, GetStaffQueryHandler>();
             service.AddScoped<IRequestHandler<GetStaffMemberQuery, Domain.Entities.Staff>, GetStaffMemberQueryHandler>();
             service.AddScoped<IRequestHandler<AddStaffMemberCommand, bool>, AddStaffMemberCommandHandler>();
+            service.AddScoped<IRequestHandler<UpdateStaffMemberCommand, bool>, UpdateStaffCommandHandler>();
             return service;
 
         }
